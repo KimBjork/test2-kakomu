@@ -2,7 +2,7 @@ package com.gamasoft.kakomu.model
 
 import com.gamasoft.kakomu.Performance.Companion.crono
 import org.junit.jupiter.api.Assertions.*
-import org.junit.jupiter.api.Test
+import org.junit.Test
 
 class ZobristTest{
 

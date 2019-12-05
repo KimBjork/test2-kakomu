@@ -15,15 +15,15 @@ class Performance {
             val start = System.nanoTime()
             val res = function()
             val elapsed = (System.nanoTime() - start) / 1000000.0
-            println("$msg in $elapsed millisec")
+            //println("$msg in $elapsed millisec")
             times.add(elapsed)
             return res
         }
 
         fun warmup(iters: Int = 10000) {
-            println("=====================================")
-            println("==              Warmup             ==")
-            println("=====================================")
+            //println("=====================================")
+            //println("==              Warmup             ==")
+            //println("=====================================")
 
             val boardSize = 9
             val startingState = GameState.newGame(boardSize)
@@ -32,14 +32,14 @@ class Performance {
             }
 
             System.gc()
-            println("Done $iters random rollouts on $boardSize board")
+            //println("Done $iters random rollouts on $boardSize board")
         }
 
         fun simulateRandomGames(boardSize: Int) {
 
-            println("=====================================")
-            println("==          Random Rollouts        ==")
-            println("=====================================")
+            //println("=====================================")
+            //println("==          Random Rollouts        ==")
+            //println("=====================================")
 
             val iter = 1000
             val times = ArrayList<Double>(iter)
@@ -51,10 +51,10 @@ class Performance {
             }
 
             times.sort()
-            println("Best time ${times.first()}")
-            println("Worst time ${times.last()}")
-            println("Average time ${times.average()}")
-            println("Median time ${times.get(times.size / 2)}")
+            //println("Best time ${times.first()}")
+            //println("Worst time ${times.last()}")
+            //println("Average time ${times.average()}")
+            //println("Median time ${times.get(times.size / 2)}")
 
         }
 

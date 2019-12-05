@@ -6,8 +6,8 @@ import com.gamasoft.kakomu.model.Board
 import com.gamasoft.kakomu.model.Evaluator
 import com.gamasoft.kakomu.model.Player
 import com.gamasoft.kakomu.model.*
+import org.junit.Test
 import org.junit.jupiter.api.Assertions
-import org.junit.jupiter.api.Test
 
 internal class EvaluatorTest{
 
@@ -112,13 +112,13 @@ internal class EvaluatorTest{
         val startingState = GameState.newGame(boardSize)
 
         val finalState = Evaluator.simulateRandomGame(startingState).state
-        printWholeMatch(finalState)
+        //printWholeMatch(finalState)
 
         Assertions.assertTrue(finalState.lastMove()!! is Move.Pass)
         val scoreWhite = Evaluator.countTerritoryAndStones(finalState.board, Player.WHITE)
         val scoreBlack = Evaluator.countTerritoryAndStones(finalState.board, Player.BLACK)
 
-        println("Final score black: $scoreBlack white: $scoreWhite")
+        //println("Final score black: $scoreBlack white: $scoreWhite")
         Assertions.assertEquals(boardSize * boardSize, scoreBlack + scoreWhite)
 
     }

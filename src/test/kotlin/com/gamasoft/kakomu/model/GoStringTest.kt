@@ -1,7 +1,7 @@
 package com.gamasoft.kakomu.model
 
 import org.junit.jupiter.api.Assertions.*
-import org.junit.jupiter.api.Test
+import org.junit.Test
 
 internal class GoStringTest {
     @Test
@@ -46,7 +46,7 @@ internal class GoStringTest {
 
         val newString = s0.mergeWith(listOf(s1, s2, s3, s4))
 
-        println("Final liberties ${newString.liberties}")
+        //println("Final liberties ${newString.liberties}")
 
         assertEquals(5, newString.stones.size)
         assertTrue( newString.stones.contains(p1))
